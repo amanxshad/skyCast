@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>SkyCast</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -15,38 +16,89 @@
     <div class="left-container">
       <div class="nav-bar-left">
         <div class="nav-bar bttn">
-          <div class="circle-dropdown"> </div>
-          <div class="circle-dropdown"> </div>
+          <div class="circle-dropdown"> 
+            <a href="#" class="icon"><i class="fa-solid fa-grip-vertical"></i></a>
+          </div>
+          <div class="circle-dropdown"> 
+            <a href="#" class="icon"><i class="fa-solid fa-bell"></i></a>
+          </div>
         </div>
           <div class="location"><h2> 📍 Delhi, India</h2></div>
-          <div class="search-bar"></div>
+          <div class="search-bar">
+            <a href="#" class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <h3> search city...</h3>
+          </div>
       </div>
       
       <div class="menu">
         <div class="text">
         <h3>Today</h3>
         <h3>Tomorrow</h3>
-        <h3>Next 7 days</h3>
+        <h3 class="bold">Next 7 days</h3>
         </div>
         <div class="menu-toggle"></div>
       </div>
 
       <div class="weather">
         <div class="selected">
-          <h1>SkyCast</h1>
-          <p>A weather forecast app</p>
+          <div class="selected-top">
+            <h4 class="black">MONDAY</h4>
+            <h4 class="black">11:52 PM</h4>
+          </div>
+          <div class="selected-middle">
+          <div class="black selected-temp">16°</div>
+          <div class="icon"></div>
+          </div>
+          <div class="selected-info">
+            <h6 class="black selected-info-text">Wind: NE 5kmph</h6>
+            <h6 class="black selected-info-text">pressure: 1000MB</h6>
+            <h6 class="black selected-info-text">Humidity: 60%</h6>
+          </div>
         </div>
-        <div class="days"></div>
-        <div class="days"></div>
-        <div class="days"></div>
-        <div class="days"></div>
-        <div class="days"></div>
-        <div class="days"></div>
+        
+        <div class="days">
+          <h4>TUE</h4>
+          <hr>
+          <div class="icon"></div>
+          <h1>10°</h1>
+        </div>
+        <div class="days">
+          <h4>WED</h4>
+          <hr>
+          <div class="icon"></div>
+          <h1>14°</h1>
+        </div>
+        <div class="days">
+          <h4>THUR</h4>
+          <hr>
+          <div class="icon"></div>
+          <h1>11°</h1>
+        </div>
+        <div class="days">
+          <h4>FRI</h4>
+          <hr>
+          <div class="icon"></div>
+          <h1>15°</h1>
+        </div>
+        <div class="days">
+          <h4>SAT</h4>
+          <hr>
+          <div class="icon"></div>
+          <h1>18°</h1>
+        </div>
+        <div class="days">
+          <h4>SUN</h4>
+          <hr>
+          <div class="icon"></div>
+          <h1>10°</h1>
+        </div>
       </div>
 
       <div class="map-header">
         <h3>Global map</h3>
-        <div class="viewwide"></div>
+        <div class="viewwide">
+          <h5>view wide  ✨</h5>
+        </div>
       </div>
 
       <div class="map">
@@ -57,8 +109,15 @@
     
     <div class="right-container">
       <div class="nav-bar-right">
-        <div class="theme-toggle"></div>
-        <div class="profile"></div>
+        <div class="theme-toggle">
+          <a href="#" class="icon"><i class="fa-regular fa-sun"></i></a>
+          <div class="indicator">
+            <ion-icon name="moon"></ion-icon>
+          </div>
+        </div>
+        <div class="profile">
+          <ion-icon name="person"></ion-icon>
+        </div>
       </div>
       <div class="rain">
         <h3>Chance of rain</h3>
@@ -74,6 +133,7 @@
 
   </div>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 
 </html>

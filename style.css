@@ -3,70 +3,34 @@ html {
   width: 100%;
   background-color: #2E2E2E;
   color: #444;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container{
   display: flex;
   flex-direction: column;
-  background-color: #111014;
-  margin: 34px 150px;
-  padding: 32px;
-  border-radius: 40px;
   height: 86vh;
-}
-
-.nav-bar{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#mid-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  position: fixed;
-  top: 50px;
-  left: 160px;
-  width: 70%;
-}
-
-h2{
-font-family: sans-serif;
-font-size: 14px;
-margin: 10px 0px 30px 104px;
-}
-
-
-p{
-  margin: 10px 0 30px 0;
-}
-
-.circle-dropdown{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #232325;
-  margin: 0 20px 0 0;
-  position: relative;
-  left: 1%;
-  top: -10px;
-}
-
-.bttn{
-  position: fixed;
-  left: 180px;
-  top: 60px;
-}
-
-.search-bar{
-  width: 70%;
-  height: 40px;
+  padding: 32px;
+  margin: 34px 150px;
   border-radius: 40px;
-  background-color: #232325;
-  margin: 0 0px 0 30px;
-  position: relative;
-  top: -10px;
+  background-color: #111014;
+}
+
+.left-container{
+  position: fixed;
+  border-radius: 22px;
+  width: 55%;
+  height: 85%;
+  margin: 0 5px 0 0;
+
+}
+
+.right-container{
+  position: fixed;
+  border-radius: 22px;
+  right: 196px;
+  width: 16%;
+  height: 86%;
 }
 
 .nav-bar-left{
@@ -82,29 +46,105 @@ p{
   position: relative;
   justify-content: flex-end;
   display: flex;
+}
 
+.bttn{
+  display: flex;  
+  top: 60px;
+  left: 180px;
+  position: fixed;
+}
+
+.circle-dropdown{
+  left: 1%;
+  top: -5px;
+  width: 40px;
+  height: 40px;
+  margin: 0 20px 0 0;
+  position: relative;
+  border-radius: 50%;
+  background-color: #232325;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-dropdown a, .search-bar a, .theme-toggle a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -10px;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  position: relative;
+  background: none;
+}
+
+h2{
+font-size: 14px;
+font-family: sans-serif;
+margin: 10px 0px 30px 104px;
+}
+
+
+p{
+  margin: 10px 0 30px 0;
+}
+
+.search-bar{
+  top: -10px;
+  width: 70%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 40px;
+  margin: 0 0px 0 30px;
+  background-color: #232325;
 }
 
 .theme-toggle{
-  width: 100px;
-  height: 40px;
-  border-radius: 40px;
-  background-color: #232325;
-  margin: 0 0 0 20px;
+  width: 85px;
+  height: 38px;
   position: relative;
+  display: flex;
+  align-items: center;
   top: -10px;
   right: -10px;
+  margin: 0 0px 0 20px;
+  border-radius: 40px;
+  background-color: #19191B;
+  border: 1px solid #292929;
+  transition: 0.5s;
+}
+
+.indicator{
+  left: 45px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #BBD7EB;
+}
+
+ion-icon {
+  font-size: 25px;
+  position: relative;
+  top: 7px;
+  left: 7px;
 }
 
 .profile{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: lightgoldenrodyellow;
   margin: 0 0 0 25px;
   position: relative;
   top: -10px;
   right: -10px;
+  background-color: lightgoldenrodyellow;
 }
 
 .menu{
@@ -130,80 +170,81 @@ h3{
 }
 
 .menu-toggle{
-  width: 240px;
+  width: 190px;
   height: 34px;
   border-radius: 40px;
-  background-color: #232325;
   margin: 0 0 0 20px;
   position: relative;
+  background-color: #232325;
 }
 
 .weather{
+  top: 32px;
   margin: 8px 0;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  top: 32px;
 }
 
 .selected{
-  position: relative;
-  background-color: #BBD7EB;
-  border-radius: 25px;
-  padding: 0px 19px;
   width: 38%;
   height: 220px;
+  position: relative;
+  border-radius: 25px;
+  background-color: #BBD7EB;
+  overflow: hidden;
+}
+
+.selected-top{
+  padding-top: 7px;
+  height: 45px;
+  background-color: #AECADE;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.selected-middle{
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 50px;
 }
 
 .days{
   position: relative;
-  background-color: #1B1B1D;
   border-radius: 22px;
-  padding: 10px 20px;
+  padding: 10px 18px;
   width: 10%;
   height: 200px;
   margin: 0 0 0 12px;
-  
+  background-color: #1B1B1D;
 }
 
-.tryflex{
-  display: flex;
-}
-
-.left-container{
-  position: fixed;
-  border-radius: 22px;
-  width: 55%;
-  height: 85%;
-  margin: 0 5px 0 0;
-
-}
-
-.right-container{
-  position: fixed;
-  border-radius: 22px;
-  right: 196px;
-  width: 16%;
-  height: 86%;
+hr{
+  border-color: #1B1B1D;
 }
 
 .map-header{
+  top: 24px;
+  margin: 35px auto;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  top: 24px;
-  margin: 35px auto;
 }
 
 .viewwide{
-  width: 150px;
+  width: 110px;
   height: 32px;
-  border-radius: 30px;
-  background-color: #232325;
   margin: 0 0 0 20px;
   position: relative;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: #232325;
 }
 
 .map{
@@ -212,6 +253,13 @@ h3{
   border-radius: 25px;
   padding: 0px 30px;
   height: 290px;
+  overflow: hidden;
+}
+
+.map svg {
+  width: 100%; 
+  height: 100%; 
+  color: white;
 }
 
 .rain{
@@ -239,4 +287,54 @@ h3{
   height: 88px;
   margin: 10px 0;
   border-radius: 25px;
+}
+
+
+h1{
+  text-align: center;
+  margin: 20px 0 0 0;
+  color: #CBCBD1;
+}
+
+h4{
+  text-align: center;
+  margin: 5px 0 12px 0;
+  color: #CBCBD1;
+}
+
+h5{
+  text-align: center;
+  color: #CBCBD1;
+  font-weight: 300;
+  margin: 6px 0 0 0;
+}
+
+h6{
+  padding: 0 0 0 25px;
+  font-weight: 300;
+}
+
+.black{
+  color: #444;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.selected-temp{
+  margin: 5px 0 12px 0;
+}
+
+.selected-info-text{
+  margin: 0 0 5px 0;
+}
+
+.icon{
+  width: 50px;
+  height: 60px;
+  background-color: #111014;
+  border-radius: 30px;
+  opacity: 0.6;
+  margin: 20px 0 0 0;
 }
