@@ -102,7 +102,9 @@
       </div>
 
       <div class="map">
-        
+        <div style="width: 790px; right: 30px; position: relative;"> <!-- Keep map above fold -->
+          <div id="map"></div>
+        </div>
       </div>
     </div>
 
@@ -123,17 +125,47 @@
         <h3>Chance of rain</h3>
       </div>
       <div class="graph"></div>
+
+      
       <div class="cities">
         <h3>Other large cities</h3>
       </div>
-      <div class="city-panel"></div>
-      <div class="city-panel"></div>
-      <div class="city-panel"></div>
+      <div class="city-panel">
+        <div class="upper">
+          <h3>US</h3>
+          <h3 style="font-size: 14px; font-weight: 500; opacity:0.9"">California</h3>
+        </div>
+        <div class="lower">
+          <h3 style="font-size: 10px; opacity: 0.8">Mostly Sunny</h3>
+        </div>
+      </div>
+      
+      <div class="city-panel">
+        <div class="upper">
+          <h3>China</h3>
+          <h3 style="font-size: 14px; font-weight: 500; opacity:0.9"">Beijing</h3>
+        </div>
+        <div class="lower">
+          <h3 style="font-size: 10px; opacity: 0.8">Cloudy</h3>
+        </div>
+      </div>
+      
+      <div class="city-panel">
+        <div class="upper">
+          <h3>UAE</h3>
+          <h3 style="font-size: 14px; font-weight: 500; opacity:0.9"">Abu Dhabi</h3>
+        </div>
+        <div class="lower">
+          <h3 style="font-size: 10px; opacity: 0.8">Humid</h3>
+        </div>
+      </div>
     </div>
 
   </div>
   <script src="script.js"></script>
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="mapdata.js"></script>
+  <script src="worldmap.js"></script>
 </body>
 
 </html>
