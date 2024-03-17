@@ -15,6 +15,7 @@
     
     <div class="left-container">
       <div class="nav-bar-left">
+        
         <div class="nav-bar bttn">
           <div class="circle-dropdown"> 
             <a href="#" class="icon"><i class="fa-solid fa-grip-vertical"></i></a>
@@ -23,11 +24,13 @@
             <a href="#" class="icon"><i class="fa-solid fa-bell"></i></a>
           </div>
         </div>
-          <div class="location"><h2> 📍 Delhi, India</h2></div>
-          <div class="search-bar">
-            <a href="#" class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <h3> search city...</h3>
-          </div>
+        <div class="location"><h2><i class="fa-solid fa-location-dot"></i> Delhi, India</h2></div>
+              
+        <div class="search-bar">
+          <a href="#" class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <input type="text" placeholder="search city...">
+        </div>
+      
       </div>
       
       <div class="menu">
@@ -36,18 +39,23 @@
         <h3>Tomorrow</h3>
         <h3 class="bold">Next 7 days</h3>
         </div>
-        <div class="menu-toggle"></div>
+        <div class="menu-toggle">
+          <div class="forecast active">Forecast</div>
+          <div class="forecast">Air quality</div>
+        </div>
       </div>
 
       <div class="weather">
-        <div class="selected">
+        <div id="selected">
           <div class="selected-top">
             <h4 class="black">MONDAY</h4>
             <h4 class="black">11:52 PM</h4>
           </div>
           <div class="selected-middle">
           <div class="black selected-temp">16°</div>
-          <div class="icon"></div>
+          <div class="icon">
+            <img src="weather-icons/sunny.png" alt="cloudy">
+          </div>
           </div>
           <div class="selected-info">
             <h6 class="black selected-info-text">Wind: NE 5kmph</h6>
@@ -55,55 +63,71 @@
             <h6 class="black selected-info-text">Humidity: 60%</h6>
           </div>
         </div>
-        
-        <div class="days">
+
+        <div id="days">
           <h4>TUE</h4>
           <hr>
-          <div class="icon"></div>
+          <div class="icon">
+            <img src="weather-icons/thunderstorm_with_sun.png" alt="thunder-sun">
+          </div>
           <h1>10°</h1>
         </div>
-        <div class="days">
+        <div id="days">
           <h4>WED</h4>
           <hr>
-          <div class="icon"></div>
-          <h1>14°</h1>
+          <div class="icon">
+            <img src="weather-icons/thunderstorm.png" alt="thunder">
+          </div>
+          <h1>12°</h1>
         </div>
-        <div class="days">
+        <div id="days">
           <h4>THUR</h4>
           <hr>
-          <div class="icon"></div>
-          <h1>11°</h1>
+          <div class="icon">
+            <img src="weather-icons/cloudy.png" alt="cloudy">
+          </div>
+          <h1>16°</h1>
         </div>
-        <div class="days">
+        <div id="days">
           <h4>FRI</h4>
           <hr>
-          <div class="icon"></div>
+          <div class="icon">
+            <img src="weather-icons/cloudy.png" alt="cloudy">
+          </div>
           <h1>15°</h1>
         </div>
-        <div class="days">
+        <div id="days">
           <h4>SAT</h4>
           <hr>
-          <div class="icon"></div>
-          <h1>18°</h1>
+          <div class="icon">
+            <img src="weather-icons/thunderstorm.png" alt="cloudy-moon">
+          </div>
+          <h1>10°</h1>
         </div>
-        <div class="days">
+        <div id="days">
           <h4>SUN</h4>
           <hr>
-          <div class="icon"></div>
-          <h1>10°</h1>
+          <div class="icon">
+            <img src="weather-icons/rainy.png" alt="cloudy-moon">
+          </div>
+          <h1>11°</h1>
         </div>
       </div>
 
       <div class="map-header">
         <h3>Global map</h3>
         <div class="viewwide">
-          <h5>view wide  ✨</h5>
+          <h5>view wide </h5>
         </div>
       </div>
 
       <div class="map">
-        <div style="width: 790px; right: 30px; position: relative;"> <!-- Keep map above fold -->
+        <div style="width: 790px; right: 30px; position: relative;"> 
           <div id="map"></div>
+        </div>
+        <div class="zoom-cover">
+          <div class="zoom-bttn">+</div>
+          <div class="zoom-bttn">-</div>
         </div>
       </div>
     </div>
@@ -111,20 +135,46 @@
     
     <div class="right-container">
       <div class="nav-bar-right">
+        
         <div class="theme-toggle">
           <a href="#" class="icon"><i class="fa-regular fa-sun"></i></a>
           <div class="indicator">
             <ion-icon name="moon"></ion-icon>
           </div>
         </div>
+        
         <div class="profile">
           <ion-icon name="person"></ion-icon>
         </div>
+        
       </div>
+
+      
       <div class="rain">
         <h3>Chance of rain</h3>
       </div>
-      <div class="graph"></div>
+      <div class="rainbar">
+        <div id="column" style="height:70px"></div>
+        <div id="column"></div>
+        <div id="column"></div>
+        <div id="column"></div>
+        <div id="column"></div>
+        <div id="column"></div>
+      </div>
+      <div class="graph">
+        <div class="inline"><h3>Rainy</h3><hr></div>
+        <div class="inline"><h3>Moist</h3><hr></div>
+        <div class="inline"><h3>Arid‎ ‎ ‎</h3><hr></div>
+        <div class="inline">
+          <h4>10AM</h4>
+          <h4>11AM</h4>
+          <h4>12AM</h4>
+          <h4>01PM</h4>
+          <h4>02PM</h4>
+          <h4>03PM</h4>
+        </div>
+        
+      </div>
 
       
       <div class="cities">
@@ -134,6 +184,10 @@
         <div class="upper">
           <h3>US</h3>
           <h3 style="font-size: 14px; font-weight: 500; opacity:0.9"">California</h3>
+          <div class="icon">
+            <img src="weather-icons/cloudy.png" alt="cloudy">
+          </div>
+          <h4>29°</h4>
         </div>
         <div class="lower">
           <h3 style="font-size: 10px; opacity: 0.8">Mostly Sunny</h3>
@@ -144,6 +198,10 @@
         <div class="upper">
           <h3>China</h3>
           <h3 style="font-size: 14px; font-weight: 500; opacity:0.9"">Beijing</h3>
+          <div class="icon">
+            <img src="weather-icons/rain_with_sun.png" alt="rain-sun">
+          </div>
+          <h4>16°</h4>
         </div>
         <div class="lower">
           <h3 style="font-size: 10px; opacity: 0.8">Cloudy</h3>
@@ -154,6 +212,10 @@
         <div class="upper">
           <h3>UAE</h3>
           <h3 style="font-size: 14px; font-weight: 500; opacity:0.9"">Abu Dhabi</h3>
+          <div class="icon">
+            <img src="weather-icons/sunny.png" alt="sunny">
+          </div>
+          <h4>32°</h4>
         </div>
         <div class="lower">
           <h3 style="font-size: 10px; opacity: 0.8">Humid</h3>

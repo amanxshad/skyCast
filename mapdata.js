@@ -11,7 +11,7 @@ var simplemaps_worldmap_mapdata={
     state_color: "#323232",
     state_hover_color: "#BBD7EB",
     border_size: 1,
-    border_color: "#CBCBD1",
+    border_color: "#222221",
     all_states_inactive: "no",
     all_states_zoomable: "no",
     

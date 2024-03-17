@@ -7,31 +7,38 @@ html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container{
   display: flex;
-  flex-direction: column;
-  height: 86vh;
+  position: relative;
+  top: 40px;
+  height: 670px;
+  width: 900px;
   padding: 32px;
-  margin: 34px 150px;
   border-radius: 40px;
   background-color: #111014;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
 .left-container{
-  position: fixed;
+  position: relative;
   border-radius: 22px;
-  width: 55%;
+  width: 76%;
   height: 85%;
   margin: 0 5px 0 0;
-
+  background
 }
 
 .right-container{
-  position: fixed;
+  position: relative;
   border-radius: 22px;
-  right: 196px;
-  width: 16%;
+  left: 20px;
+  width: 22%;
   height: 86%;
 }
 
@@ -52,14 +59,12 @@ html {
 
 .bttn{
   display: flex;  
-  top: 60px;
-  left: 180px;
-  position: fixed;
+  position: relative;
 }
 
 .circle-dropdown{
   left: 1%;
-  top: -5px;
+  top: -10px;
   width: 40px;
   height: 40px;
   margin: 0 20px 0 0;
@@ -84,10 +89,19 @@ html {
   background: none;
 }
 
+.location{
+  width: 20%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h2{
-font-size: 14px;
-font-family: sans-serif;
-margin: 10px 0px 30px 104px;
+  font-size: 14px;
+  font-family: sans-serif;
+  margin: 10px 0px 30px 0;
+  color: #757575;
 }
 
 
@@ -107,6 +121,15 @@ p{
   background-color: #232325;
 }
 
+input{
+  background-color: #232325;;
+  border: none;
+  color: #CBCBD1;
+  outline: none;
+  width: 87%;
+  height: 87%;
+}
+
 .theme-toggle{
   width: 85px;
   height: 38px;
@@ -114,7 +137,7 @@ p{
   display: flex;
   align-items: center;
   top: -10px;
-  right: -10px;
+  right: -3px;
   margin: 0 0px 0 20px;
   border-radius: 40px;
   background-color: #19191B;
@@ -145,7 +168,6 @@ ion-icon {
   margin: 0 0 0 25px;
   position: relative;
   top: -10px;
-  right: -10px;
   background-color: lightgoldenrodyellow;
 }
 
@@ -154,7 +176,7 @@ ion-icon {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  top: 24px;
+  margin-top: 20px;
 }
 
 .text{
@@ -173,25 +195,47 @@ h3{
 
 .menu-toggle{
   width: 190px;
-  height: 34px;
-  border-radius: 40px;
+  height: 30px;
+  border-radius: 34px;
   margin: 0 0 0 20px;
   position: relative;
+  display: flex;
+  align-items:center;
   background-color: #232325;
 }
 
+.forecast{
+  width: 100px;
+  height: 30px;
+  border-radius: 34px;
+  font-size: 12px;
+  position: relative;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color: #757575;
+  z-index:0;
+}
+
+.forecast.active{
+  background-color: #BBD7EB;
+  color: #444;
+  transition: 0.5s;
+  z-index:1;
+}
+
 .weather{
-  top: 32px;
-  margin: 8px 0;
+  margin-top: 30px;
+  margin: 20px 0 8px 0;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.selected{
-  width: 38%;
-  height: 220px;
+#selected{
+  width: 28%;
+  height: 190px;
   position: relative;
   border-radius: 25px;
   background-color: #BBD7EB;
@@ -200,7 +244,7 @@ h3{
 
 .selected-top{
   padding-top: 7px;
-  height: 45px;
+  height: 40px;
   background-color: #AECADE;
   display: flex;
   align-items: center;
@@ -216,13 +260,18 @@ h3{
   font-size: 50px;
 }
 
-.days{
+.selected-info{
+  position: relative;
+  top: -12px;
+}
+
+#days{
   position: relative;
   border-radius: 22px;
-  padding: 10px 18px;
-  width: 10%;
-  height: 200px;
-  margin: 0 0 0 12px;
+  padding: 10px 14px;
+  width: 6%;
+  height: 170px;
+  margin: 0 0 0 6px;
   background-color: #1B1B1D;
 }
 
@@ -231,8 +280,7 @@ hr{
 }
 
 .map-header{
-  top: 24px;
-  margin: 35px auto;
+  margin: 25px 0 13px 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -240,13 +288,14 @@ hr{
 }
 
 .viewwide{
-  width: 110px;
-  height: 32px;
+  width: 96px;
+  height: 30px;
   margin: 0 0 0 20px;
   position: relative;
   justify-content: center;
   border-radius: 30px;
   background-color: #232325;
+  color: #757575;
 }
 
 .map{
@@ -262,17 +311,20 @@ hr{
 .map svg {
   width: 100%; 
   height: 100%; 
+  left: -40px;
   color: white;
 }
 
 #map_outer{
   top: 10px !important;
   left: 10px !important;
+  scale: 0.9;
 }
 
 #map_zoom{
   top: 90px !important;
   left: 10px !important;
+  scale: 0.9;
 }
 
 path{
@@ -282,7 +334,7 @@ path{
 .rain{
   display: flex;
   position: relative;
-  margin: 33px 0 0 0;
+  margin: 30px 0 9px 0;
 }
 
 .cities{
@@ -292,43 +344,100 @@ path{
 }
 
 .graph{
-  background-color: #1B1B1D;
-  height: 200px;
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  top: 108px;
+  height: 190px;
   margin: 6px 0;
-  padding: 10px 20px;
   border-radius: 25px;
+}
+
+.graph .inline{
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  position: relative;
+  top: -18px;
+}
+
+.graph h3{
+  color: #CBCBD1;
+  font-size: 12px;
+  font-weight: 100;
+  position: relative;
+  opacity: 0.5;
+}
+
+.graph hr{
+  border: none;
+  border-top: 1.4px dashed #CBCBD1;
+  opacity: 0.5;
+  width: 153px;
+}
+
+.graph h4{
+  color: #CBCBD1;
+  font-size: 8px;
+  font-weight: 100;
+  position: relative;
+  padding: 0px 3px;
+  bottom: -43px;
+  left: 40px;
+}
+
+.rainbar {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap-reverse;
+  align-content: baseline;
+  margin: 30px 0 58px 0;
+}  
+
+.rainbar #column{
+  position: relative;
+  height: 145px;
+  width: 5px;
+  left: 50px;
+  margin-right: 22px;
+  border-radius: 3px;
+  background-color: #BBD7EB;
 }
 
 .city-panel{
   background-color: #1B1B1D;
-  height: 88px;
-  margin: 10px 0;
+  height: 90px;
+  margin: 4px 0 10px 0;
   border-radius: 25px;
 }
 
 
 h1{
   text-align: center;
-  margin: 20px 0 0 0;
+  margin: 17px 0 0 0;
   color: #CBCBD1;
+  font-size: 23px;
 }
 
 h4{
   text-align: center;
   margin: 5px 0 12px 0;
   color: #CBCBD1;
+  font-size: 12px;
 }
 
 h5{
   text-align: center;
-  color: #CBCBD1;
   font-weight: 300;
   margin: 6px 0 0 0;
 }
 
 h6{
-  padding: 0 0 0 25px;
+  padding: 0 0 0 20px;
   font-weight: 300;
+  font-size: 8px;
 }
 
 .black{
@@ -337,6 +446,7 @@ h6{
 
 .bold{
   font-weight: bold;
+  color: #757575;
 }
 
 .selected-temp{
@@ -344,20 +454,38 @@ h6{
 }
 
 .selected-info-text{
-  margin: 0 0 5px 0;
+  margin: 0 0 3px 0;
 }
 
 .icon{
   width: 50px;
   height: 60px;
-  background-color: #111014;
   border-radius: 30px;
   opacity: 0.6;
   margin: 20px 0 0 0;
 }
 
+#selected .icon img {
+  position: relative;
+  top: -25px;
+  left: -25px;
+  width: 100px; 
+  height: auto; 
+  scale: 1.1;
+}
+
+.icon img {
+  position: relative;
+  top: -20px;
+  left: -28px;
+  width: 100px; 
+  height: auto; 
+  scale: 0.6;
+}
+
 .upper{
   height: 50px;
+  padding-top: 1px;
 }
 
 .upper h3{
@@ -370,6 +498,24 @@ h6{
   opacity: 0.5;
 }
 
+.upper .icon img{
+  position: relative;
+  top: -78px;
+  left: 109px;
+  width: 100px;
+  height: auto;
+  scale: 0.54;
+}
+
+.upper h4{
+  color: #CBCBD1;
+  position: relative;
+  top: -72px;
+  left: 60px;
+  font-size: 18px;
+  opacity: 0.5;
+}
+
 .lower{
   height: 38px;
   color: #CBCBD1;
@@ -377,4 +523,30 @@ h6{
 
 .lower h3{
   padding: 11px 0 0 20px;
+}
+
+.zoom-cover{
+  width: 40px;
+  height: 78px;
+  top: 87px;
+  left: 9px;
+  border-radius: 30px;
+  position: absolute;
+  background-color: #1B1B1D;;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.zoom-bttn{
+  width: 32px;
+  height: 32px;
+  margin: 4px 4px;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #29292A;
+  z-index: 2;
+  display: flex;
+  pointer-events: none;
+  justify-content: center;
+  line-height: calc(100% + 10px);
 }
