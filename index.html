@@ -7,6 +7,7 @@
   <title>SkyCast</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="lightmode.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -64,7 +65,7 @@
           </div>
         </div>
 
-        <div id="days">
+        <div class="days">
           <h4>TUE</h4>
           <hr>
           <div class="icon">
@@ -72,7 +73,7 @@
           </div>
           <h1>10°</h1>
         </div>
-        <div id="days">
+        <div class="days">
           <h4>WED</h4>
           <hr>
           <div class="icon">
@@ -80,7 +81,7 @@
           </div>
           <h1>12°</h1>
         </div>
-        <div id="days">
+        <div class="days">
           <h4>THUR</h4>
           <hr>
           <div class="icon">
@@ -88,7 +89,7 @@
           </div>
           <h1>16°</h1>
         </div>
-        <div id="days">
+        <div class="days">
           <h4>FRI</h4>
           <hr>
           <div class="icon">
@@ -96,7 +97,7 @@
           </div>
           <h1>15°</h1>
         </div>
-        <div id="days">
+        <div class="days">
           <h4>SAT</h4>
           <hr>
           <div class="icon">
@@ -104,7 +105,7 @@
           </div>
           <h1>10°</h1>
         </div>
-        <div id="days">
+        <div class="days">
           <h4>SUN</h4>
           <hr>
           <div class="icon">
@@ -136,16 +137,13 @@
     <div class="right-container">
       <div class="nav-bar-right">
         
-        <div class="theme-toggle">
+        <div id="theme-toggle">
           <a href="#" class="icon"><i class="fa-regular fa-sun"></i></a>
-          <div class="indicator">
-            <ion-icon name="moon"></ion-icon>
-          </div>
+          <ion-icon name="moon"></ion-icon>
+          <div class="indicator"></div>
         </div>
         
-        <div class="profile">
-          <ion-icon name="person"></ion-icon>
-        </div>
+        <div class="profile"></div>
         
       </div>
 
@@ -154,12 +152,12 @@
         <h3>Chance of rain</h3>
       </div>
       <div class="rainbar">
-        <div id="column" style="height:70px"></div>
-        <div id="column"></div>
-        <div id="column"></div>
-        <div id="column"></div>
-        <div id="column"></div>
-        <div id="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
       </div>
       <div class="graph">
         <div class="inline"><h3>Rainy</h3><hr></div>

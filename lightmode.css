@@ -1,0 +1,65 @@
+
+.light-theme{
+    color: #444;
+    background: linear-gradient(to bottom right, #e1e1e1, #dddddd, #e1e1e1)
+  }
+  
+  .container.light{
+    background-color: #A7A7A8;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.35);
+  }
+  
+  .light .indicator{
+    left: -3px;
+    transition:0.5s;
+  }
+  
+  #theme-toggle.light{
+    background-color: #cfcfcf;
+    border-color: #cacaca;
+  }
+  
+  #theme-toggle.light a{
+    scale: 1.2;
+    left: -4px;
+    transition: 0.5s;
+    color: #7c7c7c;
+  }
+  
+  #theme-toggle.light ion-icon{
+    color: white;
+    scale: 0.8;
+    transition: 0.5s;
+  }
+  
+  .light .circle-dropdown a{
+    color: #444;
+  }
+  
+  .light .circle-dropdown, .light .days, .light .menu-toggle,  .light .city-panel, .light .viewwide{
+    background-color: #cfcfcf;
+  }
+  
+  .light .map, .light .zoom-cover{
+    background-color: #d4d4d4;
+  }
+  
+  .light .zoom-bttn{
+    background-color: #b5b5b5;
+    color: white;
+  }
+  
+  .light .search-bar, .light input{
+    background-color: #cfcfcf;
+    color: white;
+  }
+  
+  .light h1, .light h3, .light h4{
+    color: white;
+    opacity: 0.7;
+  }
+  
+  .light .days hr{
+    opacity: 0.1;
+  }
+  
